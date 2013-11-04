@@ -79,7 +79,7 @@ namespace VVVV.Nodes
 		//called when data for any output pin is requested
 		public void Evaluate(int spreadMax)
 		{
-			FReader.ResizeAndDispose(spreadMax, (slice) => new LineReader(FFile[slice]));
+			FReader.ResizeAndDispose(spreadMax, (slice) => CreateLineReader(FFile[slice]));
 
 			if (FFile.IsChanged || FId.IsChanged || FCount.IsChanged)
 			{
@@ -92,28 +92,48 @@ namespace VVVV.Nodes
 					if (FFile.IsChanged)
 					{
 						FReader[i].Dispose();
-						FReader[i] = new LineReader(FFile[i]);
-						
+						FReader[i] = CreateLineReader(FFile[i]);
 					}
-					foreach (string line in FReader[i].ReadLines(FId[i],FCount[i]))
+					if (FReader[i].IsValid)
 					{
-						string[] components = line.Split(' ');
-						foreach (string c in components)
+						foreach (string line in FReader[i].ReadLines(FId[i],FCount[i]))
 						{
-							try
+						
+							string[] components = line.Split(' ');
+							foreach (string c in components)
 							{
-								FOutput.Add(double.Parse(c.Replace(".",",")));
-							}
-							catch
-							{
-								FLogger.Log(LogType.Debug, c);
+								try
+								{
+									FOutput.Add(double.Parse(c.Replace(".",",")));
+								}
+								catch
+								{
+									FLogger.Log(LogType.Debug, "cannot parse "+c);
+								}
 							}
 						}
-							
+						FLineId.Add(FReader[i].LineIndex);
 					}
-					FLineId.Add(FReader[i].LineIndex);
+					else
+					{
+						FLineId.Add(-1);
+					}
 				}
 			}
+		}
+		
+		private LineReader CreateLineReader(string filename)
+		{
+			LineReader lr;
+			try
+			{
+				lr = new LineReader(filename);
+			}
+			catch
+			{
+				lr = new LineReader();
+			}
+			return lr;
 		}
 		
 		private class LineReader : StreamReader
@@ -122,6 +142,7 @@ namespace VVVV.Nodes
 			public int LineCount;
 			private List<long> lineStart;
 			private bool valid;
+			public bool IsValid { get { return valid; } }
 			
 			private List<string> buffer;
 			public LineReader(string filename):base(filename)
@@ -131,27 +152,31 @@ namespace VVVV.Nodes
 				lineStart = new List<long>();
 				
 				valid = this.BaseStream != null;
-				
-				
-					if (valid)
+				if (valid)
+				{
+					int pos = 0;
+					this.BaseStream.Position = 0;
+					while (!this.EndOfStream)
 					{
-						int pos = 0;
-						this.BaseStream.Position = 0;
-						while (!this.EndOfStream)
-						{
-							lineStart.Add(pos);
-							pos += this.ReadLine().Length;
-							LineCount++;
-						}
-						ResetPosition();
+						lineStart.Add(pos);
+						pos += this.ReadLine().Length;
+						LineCount++;
 					}
-				
+					ResetPosition();
+				}
 				buffer = new List<string>();
+			}
+			
+			public LineReader():base(new MemoryStream())
+			{
+				LineIndex = -1;
+				LineCount = 0;
+				valid = false;
 			}
 			
 			public List<string> ReadLines(int index, int count)
 			{
-				if (this.BaseStream == null)
+				if (!valid)
 				{
 					buffer.Clear();
 					return buffer;

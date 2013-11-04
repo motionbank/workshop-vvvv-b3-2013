@@ -1,0 +1,217 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.dtd" >
+   <PATCH nodename="E:\develop\workshop-vvvv-b3-2013\vvvv_intro\04_2_3D.v4p">
+   <BOUNDS height="11625" left="6675" top="825" type="Window" width="10620">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="24" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="255" left="60" top="45" type="Node" width="2115">
+   </BOUNDS>
+   <BOUNDS height="435" left="60" top="45" type="Box" width="10410">
+   </BOUNDS>
+   <BOUNDS height="160" left="1305" top="1425" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|how deep is your love|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="21" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="120" top="660" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="1095" left="120" top="660" type="Box" width="10470">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|3D nr 1:&cr;&lf;&cr;&lf;Spreads can be interpreted as list of 3D coordinates: X, Y, Z, X, Y, Z&cr;&lf;though it appears just like a long list of numbers, we just logically think of them as Vectors|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <INFO author="woei" description="b3 MotionBank workshop (ffm, 2013/10)" tags="workshop, tutorial, introduction">
+   </INFO>
+   <NODE componentmode="InABox" id="173" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="3510" top="10425" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="555" left="3510" top="10425" type="Box" width="2025">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|1) Renderer (EX9)&cr;&lf;set Depthbuffer!|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="216" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="4860" top="9525" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="585" left="4860" top="9525" type="Box" width="3480">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|2) Perspective (Transform)&cr;&lf;Perspective -&gt; Renderer: Projection|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="217" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="4905" top="8670" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="600" left="4905" top="8670" type="Box" width="3435">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|3) Translate (Transform): Z=3&cr;&lf;Translate -&gt; Renderer: View|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="218" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="5010" top="7410" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="855" left="5010" top="7410" type="Box" width="3240">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|4) &cr;&lf;Sphere (EX9.Geometry)&cr;&lf;PhongPoint (EX9.Effect)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="221" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="4995" top="6750" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="345" left="4995" top="6750" type="Box" width="3630">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|5) Transform (Transform 3d Vector)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="222" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="5970" top="1875" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="300" left="5970" top="1875" type="Box" width="3600">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|6) LFO (Animation)|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="223" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="5970" top="2280" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="855" left="5970" top="2280" type="Box" width="3585">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|7) RandomSpread (Spreads)&cr;&lf;Spread Count = 3 (x,y&amp;z)&cr;&lf;LFO: Cylcles -&gt; Random:Seed|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="224" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="5955" top="3330" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="570" left="5955" top="3330" type="Box" width="3435">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|8) DeNiro (Animation)&cr;&lf;because he drives so smooth|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE componentmode="InABox" id="225" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="6075" top="4395" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="570" left="6075" top="4395" type="Box" width="3435">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|9) Queue (Spreads)&cr;&lf;Insert = 1; Frame Count = 50|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="227" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="255" top="4620" width="5790" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="255" top="4620" width="2010" height="885">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|stores the last 50 incoming values if set to insert, in our case stores 3d vectors|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="228" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="6150" top="5235" width="5790" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="6150" top="5235" width="3840" height="1395">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="|10) &cr;&lf;LinearSpread (Spreads)&cr;&lf;Input: 0.5; Width: -0.5; Spread = Queue Frame Count&cr;&lf;&cr;&lf;Select (Value)&cr;&lf;Select: 3, because we need values for x,y,z|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   </PATCH>

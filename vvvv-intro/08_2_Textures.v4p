@@ -1,0 +1,189 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta31.dtd" >
+   <PATCH nodename="D:\Dropbox\B3 Frankfurt\vvvv-intro\08_2_Textures.v4p">
+   <BOUNDS height="11625" left="6675" top="825" type="Window" width="10620">
+   </BOUNDS>
+   <NODE componentmode="InABox" id="24" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="255" left="45" top="15" type="Node" width="2115">
+   </BOUNDS>
+   <BOUNDS height="435" left="45" top="15" type="Box" width="10410">
+   </BOUNDS>
+   <BOUNDS height="160" left="1305" top="1425" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="slitscan">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="12">
+   </PIN>
+   <PIN pinname="Font" slicecount="1" values="|Lucida Sans Unicode|">
+   </PIN>
+   <PIN pinname="Show SliceIndex" slicecount="1" values="0">
+   </PIN>
+   </NODE>
+   <INFO author="woei" description="b3 MotionBank workshop (ffm, 2013/10)" tags="workshop, tutorial, introduction">
+   </INFO>
+   <NODE componentmode="InABox" id="252" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS height="690" left="60" top="555" type="Node" width="870">
+   </BOUNDS>
+   <BOUNDS height="1095" left="60" top="555" type="Box" width="10380">
+   </BOUNDS>
+   <BOUNDS height="160" left="600" top="600" type="Window" width="215">
+   </BOUNDS>
+   <PIN encoded="0" pinname="Input String" slicecount="1" visible="0" values="|creating an image, where each stripe i|">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="331" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="690" left="4260" top="2610" width="870">
+   </BOUNDS>
+   <BOUNDS type="Box" height="300" left="4260" top="2610" width="1995">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" visible="0" values="|1) VideoIn (DShow9)|">
+   </PIN>
+   <BOUNDS type="Window" height="160" left="600" top="600" width="215">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="332" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="690" left="4260" top="3120" width="870">
+   </BOUNDS>
+   <BOUNDS type="Box" height="300" left="4260" top="3120" width="2910">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" visible="0" values="|2) VideoTexture (EX9.Texture)|">
+   </PIN>
+   <BOUNDS type="Window" height="160" left="600" top="600" width="215">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="333" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="690" left="4260" top="4320" width="870">
+   </BOUNDS>
+   <BOUNDS type="Box" height="780" left="4260" top="4320" width="3750">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" visible="0" values="|3) Queue (EX9.Texture)&cr;&lf;+ Interger IOBox on Frame Count: 64&cr;&lf;+ Insert Pin: On|">
+   </PIN>
+   <BOUNDS type="Window" height="160" left="600" top="600" width="215">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="334" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="690" left="4260" top="5520" width="870">
+   </BOUNDS>
+   <BOUNDS type="Box" height="840" left="4260" top="5520" width="3780">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" visible="0" values="|4) LinearSpread (Spreads)&cr;&lf;+ Spread Count -&gt; Frame Count IOBox&cr;&lf;this is going to be the x Position|">
+   </PIN>
+   <BOUNDS type="Window" height="160" left="600" top="600" width="215">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="335" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="690" left="4260" top="6780" width="870">
+   </BOUNDS>
+   <BOUNDS type="Box" height="840" left="4260" top="6780" width="3780">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" visible="0" values="|5) / (Value)&cr;&lf;+ Input 2 -&gt; Frame Count IOBox&cr;&lf;this is going to be x Scaling|">
+   </PIN>
+   <BOUNDS type="Window" height="160" left="600" top="600" width="215">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="336" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="690" left="3360" top="9555" width="870">
+   </BOUNDS>
+   <BOUNDS type="Box" height="315" left="3360" top="9555" width="4110">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" visible="0" values="|6) Renderer (EX9)|">
+   </PIN>
+   <BOUNDS type="Window" height="160" left="600" top="600" width="215">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="337" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="690" left="3360" top="9150" width="870">
+   </BOUNDS>
+   <BOUNDS type="Box" height="300" left="3360" top="9150" width="4110">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" visible="0" values="|7) Quad (DX9)|">
+   </PIN>
+   <BOUNDS type="Window" height="160" left="600" top="600" width="215">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE id="338" componentmode="InABox" nodename="IOBox (String)" systemname="IOBox (String)">
+   <BOUNDS type="Node" height="690" left="3360" top="7995" width="870">
+   </BOUNDS>
+   <BOUNDS type="Box" height="840" left="3360" top="7995" width="3060">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" encoded="0" visible="0" values="|8) Transform (2d)&cr;&lf;+ Output to Quad Transform &amp; Texture Transform|">
+   </PIN>
+   <BOUNDS type="Window" height="160" left="600" top="600" width="215">
+   </BOUNDS>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   </PATCH>
